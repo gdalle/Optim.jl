@@ -244,6 +244,7 @@ function run_optim_tests_constrained(method; convergence_exceptions = (),
     end
 end
 
+@testset verbose=true "Optim.jl" begin
 
 @testset "special" begin
     for my_test in special_tests
@@ -280,4 +281,6 @@ end
 
 @testset "MOI wrapper" begin
     include("MOI_wrapper.jl")
+end
+
 end
